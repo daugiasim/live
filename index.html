@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐÁU GIÁ SIM</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/countdown.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/b32c38a463.js" crossorigin="anonymous"></script>
+    <style>
+        html {
+            font-family: system-ui;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+    <div style="position: absolute; text-align: center; display: none" id="divmain">
+        <h2 style="color: #007d72; font-size: 6em; MARGIN-TOP:-10PX">
+            PHIÊN LIVE NGÀY <span id="phienban">31-10-2023</span>
+        </h2>
+        <h2 style="color: rgb(168, 0, 14); font-size: 12em; letter-spacing: 30px; font-weight: 1000;;" id="sdt">
+            0989.888.999
+        </h2>
+        <h2 style="color: rgb(0 146 181); font-size: 5em;  font-weight: 1000; text-align: left !important;">
+            NHÀ MẠNG: <strong style="color: rgb(225 137 0); font-size: 1.2em;" id="nhamangid">VIETTEL</strong>
+        </h2><BR>
+        <h3 style="color:rgb(0 146 181); font-size: 5em;  font-weight: 1000; text-align: left !important;">
+            CHUYỂN MẠNG <span style="color: rgb(225 137 0); font-size: 1.0em;" id="chuyenmangid">MIỄN PHÍ</span>
+        </h3>
+        <h3 style="color: rgb(0 146 181); font-size: 5em;  font-weight: 1000; text-align: left !important;">
+            KHỞI ĐIỂM: <span style="color: rgb(225 137 0); font-size: 1.5em;" id="khoidiemid">2.000K</span>
+        </h3>
+        <h3 style="color: rgb(0 146 181); font-size: 5em;  font-weight: 1000; text-align: left !important;">
+            BƯỚC NHẢY: <span style="color: rgb(225 137 0);; font-size: 1.5em;" id="buocnhayid">50K - 100K</span>
+        </h3>
+    </div>
+    <div style="text-align: center;">
+        <button id="batdau" onclick="BatDau()" style="font-size: 70px;padding: 10px;border-radius:20PX; color:white;  background-color: #007d72; display: none;">BẮT ĐẦU</button>
+    </div>
+    <div style="MARGIN-RIGHT:-68%; margin-top: 23%; display: none;" id="mydiv" class="countdown-container"
+        data-duration="" data-transition="linear" data-color="#007d72" data-size="580" data-position="right">
+    </div>
+    <div id="setupid">
+        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP NGÀY LIVE</label> <BR>
+        <input id="phienbaninput" style="font-size: 30px; padding: 10px; border-radius:20PX ;"
+            placeholder="NHẬP NGÀY LIVE..."><br> <BR>
+        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP SỐ ĐIỆN THOẠI</label> <BR>
+        <input id="sdtinput" style="font-size: 30px;padding: 10px;border-radius:20PX ;"
+            placeholder="NHẬP SĐT..."><br><br>
+        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP TÊN NHÀ MẠNG</label> <BR>
+        <input id="nhamanginput" style="font-size: 30px;padding: 10px;border-radius:20PX ;"
+            placeholder="NHÀ MẠNG..."><br><br>
+        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP PHÍ CHUYỂN MẠNG</label> <BR>
+        <input id="chuyenmanginput" style="font-size: 30px;padding: 10px;border-radius:20PX ;"
+            placeholder="PHÍ CHUYỂN MẠNG..."><br><br>
+        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP GIÁ KHỞI ĐIỂM</label> <BR>
+        <input id="khoidiemINPUT" style="font-size: 30px;padding: 10px;border-radius:20PX ;"
+            placeholder="GIÁ KHỞI ĐIỂM..."><br><br>
+        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP BƯỚC NHẢY</label> <BR>
+        <input id="buocnhayidinput" style="font-size: 30px;padding: 10px;border-radius:20PX;;"
+            placeholder="BƯỚC NHẢY..."><br><br>
+            <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP THỜI GIAN</label> <BR>
+                <input id="THOIGIANIPUT" style="font-size: 30px;padding: 10px;border-radius:20PX;;"
+                    placeholder="THỜI GIAN..."><br><br>
+        <button onclick="Setup()"style="font-size: 30px;padding: 10px;border-radius:20PX; color:white;  background-color: #007d72">HOÀN TẤT</button>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+        </script><script src="js/index.js"></script>
+    <script>
+        function Setup() {
+            
+           
+            $("#setupid").hide();
+            $("#batdau").show();
+            $("#phienban").text($("#phienbaninput").val());
+            $("#sdt").text($("#sdtinput").val());
+            $("#nhamangid").text($("#nhamanginput").val());
+            $("#chuyenmangid").text($("#chuyenmanginput").val());
+            $("#khoidiemid").text($("#khoidiemINPUT").val());
+            $("#buocnhayid").text($("#buocnhayidinput").val());
+            $('#mydiv').data('duration',$("#THOIGIANIPUT").val());
+            alert($('#mydiv').data('duration')); 
+
+        }
+        function BatDau()
+        {
+            let cf = confirm("BẠN CHẮC BẮT ĐẦU CHỨ???");
+            if(cf)
+            {
+                $("#batdau").hide();
+                $("#divmain").show();
+                $("#mydiv").show();
+                initCountdown();
+            }
+        }
+    </script>
+</body>
+
+</html>
