@@ -59,6 +59,7 @@ const renderSeconds = (dr) => {
     if (dr === 0) {
       clearInterval(secondsCountdown);
       timeSpan.innerHTML = `<i class="fa-solid fa-check"></i>`;
+        location.reload();
     }
   }, 1000);
 };
