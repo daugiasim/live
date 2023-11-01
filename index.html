@@ -14,10 +14,15 @@
         html {
             font-family: system-ui;
         }
+        :not(:root):fullscreen::backdrop {
+            position: fixed;
+            inset: 0px;
+            background: white !important;
+        }
     </style>
 </head>
 
-<body style="background-color: rgb(255, 255, 255);">
+<body style="background-color: rgb(255, 255, 255);" id="BEST">
     <div style="position: absolute; text-align: center; display: none" id="divmain">
         <h2 style="color: #007d72; font-size: 6em; MARGIN-TOP:-5PX">
             PHIÊN LIVE NGÀY <span id="phienban">31-10-2023</span>
@@ -93,7 +98,18 @@
             $("#batdau").hide();
                 $("#divmain").show();
                 $("#mydiv").show();
+             openFullscreen();
                 initCountdown();
+        }
+         var elem = document.getElementById("BEST");
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
         }
     </script>
 </body>
