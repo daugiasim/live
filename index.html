@@ -14,6 +14,7 @@
         html {
             font-family: system-ui;
         }
+
         :not(:root):fullscreen::backdrop {
             position: fixed;
             inset: 0px;
@@ -24,7 +25,7 @@
 
 <body style="background-color: rgb(255, 255, 255);" id="BEST">
     <div style="position: absolute; text-align: center; display: none" id="divmain">
-        <h2 style="color: #007d72; font-size: 6em; MARGIN-TOP:-5PX">
+        <h2 style="color: #007d72; font-size: 6em; MARGIN-TOP:-10PX">
             PHIÊN LIVE NGÀY <span id="phienban">31-10-2023</span>
         </h2>
         <h2 style="color: rgb(168, 0, 14); font-size: 12em; letter-spacing: 30px; font-weight: 1000;;" id="sdt">
@@ -34,17 +35,19 @@
             NHÀ MẠNG: <strong style="color: rgb(225 137 0); font-size: 1.2em;" id="nhamangid">VIETTEL</strong>
         </h2><BR>
         <h3 style="color:rgb(0 146 181); font-size: 5em;  font-weight: 1000; text-align: left !important;">
-            CHUYỂN MẠNG <span style="color: rgb(225 137 0); font-size: 1.0em;" id="chuyenmangid">MIỄN PHÍ</span>
+            CHUYỂN MẠNG <span style="color: rgb(225 137 0); font-size: 1.2em;" id="chuyenmangid">MIỄN PHÍ</span>
         </h3>
         <h3 style="color: rgb(0 146 181); font-size: 5em;  font-weight: 1000; text-align: left !important;">
-            KHỞI ĐIỂM: <span style="color: rgb(225 137 0); font-size: 1.5em;" id="khoidiemid">2.000K</span>
+            KHỞI ĐIỂM: <span style="color: rgb(225 137 0); font-size: 1.2em;" id="khoidiemid">2.000K</span>
         </h3>
         <h3 style="color: rgb(0 146 181); font-size: 5em;  font-weight: 1000; text-align: left !important;">
-            BƯỚC NHẢY: <span style="color: rgb(225 137 0);; font-size: 1.5em;" id="buocnhayid">50K - 100K</span>
+            BƯỚC NHẢY: <span style="color: rgb(225 137 0);; font-size: 1.2em;" id="buocnhayid">50K - 100K</span>
         </h3>
     </div>
     <div style="text-align: center;">
-        <button id="batdau" onclick="BatDau()" style="font-size: 70px;padding: 10px;border-radius:20PX; color:white;  background-color: #007d72; display: none;">BẮT ĐẦU</button>
+        <button id="batdau" onclick="BatDau()"
+            style="font-size: 70px;padding: 10px;border-radius:20PX; color:white;  background-color: #007d72; display: none;">BẮT
+            ĐẦU</button>
     </div>
     <div style="MARGIN-RIGHT:-68%; margin-top: 23%; display: none;" id="mydiv" class="countdown-container"
         data-duration="" data-transition="linear" data-color="#007d72" data-size="580" data-position="right">
@@ -68,19 +71,22 @@
         <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP BƯỚC NHẢY</label> <BR>
         <input id="buocnhayidinput" style="font-size: 30px;padding: 10px;border-radius:20PX;;"
             placeholder="BƯỚC NHẢY..."><br><br>
-            <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP THỜI GIAN</label> <BR>
-                <input id="THOIGIANIPUT" style="font-size: 30px;padding: 10px;border-radius:20PX;;"
-                    placeholder="THỜI GIAN..."><br><br>
-        <button onclick="Setup()"style="font-size: 30px;padding: 10px;border-radius:20PX; color:white;  background-color: #007d72">HOÀN TẤT</button>
+        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP THỜI GIAN</label> <BR>
+        <input id="THOIGIANIPUT" style="font-size: 30px;padding: 10px;border-radius:20PX;;"
+            placeholder="THỜI GIAN..."><br><br>
+        <button onclick="Setup()"
+            style="font-size: 30px;padding: 10px;border-radius:20PX; color:white;  background-color: #007d72">HOÀN
+            TẤT</button>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
-        </script><script src="js/index.js"></script>
+        </script>
+    <script src="js/index.js"></script>
     <script>
         function Setup() {
-            
-           
+
+
             $("#setupid").hide();
             $("#batdau").show();
             $("#phienban").text($("#phienbaninput").val());
@@ -89,19 +95,18 @@
             $("#chuyenmangid").text($("#chuyenmanginput").val());
             $("#khoidiemid").text($("#khoidiemINPUT").val());
             $("#buocnhayid").text($("#buocnhayidinput").val());
-            $('#mydiv').data('duration',$("#THOIGIANIPUT").val());
-            
+            $('#mydiv').data('duration', $("#THOIGIANIPUT").val());
+            alert($('#mydiv').data('duration'));
 
         }
-        function BatDau()
-        {
-            $("#batdau").hide();
+        function BatDau() {
+             $("#batdau").hide();
                 $("#divmain").show();
                 $("#mydiv").show();
-             openFullscreen();
+                openFullscreen();
                 initCountdown();
         }
-         var elem = document.getElementById("BEST");
+        var elem = document.getElementById("BEST");
         function openFullscreen() {
             if (elem.requestFullscreen) {
                 elem.requestFullscreen();
@@ -111,6 +116,7 @@
                 elem.msRequestFullscreen();
             }
         }
+
     </script>
 </body>
 
