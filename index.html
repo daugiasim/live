@@ -19,7 +19,7 @@
 
 <body style="background-color: rgb(255, 255, 255);">
     <div style="position: absolute; text-align: center; display: none" id="divmain">
-        <h2 style="color: #007d72; font-size: 6em; MARGIN-TOP:-10PX">
+        <h2 style="color: #007d72; font-size: 6em; MARGIN-TOP:-5PX">
             PHIÊN LIVE NGÀY <span id="phienban">31-10-2023</span>
         </h2>
         <h2 style="color: rgb(168, 0, 14); font-size: 12em; letter-spacing: 30px; font-weight: 1000;;" id="sdt">
@@ -85,19 +85,15 @@
             $("#khoidiemid").text($("#khoidiemINPUT").val());
             $("#buocnhayid").text($("#buocnhayidinput").val());
             $('#mydiv').data('duration',$("#THOIGIANIPUT").val());
-            alert($('#mydiv').data('duration')); 
+            
 
         }
         function BatDau()
         {
-            let cf = confirm("BẠN CHẮC BẮT ĐẦU CHỨ???");
-            if(cf)
-            {
-                $("#batdau").hide();
+            $("#batdau").hide();
                 $("#divmain").show();
                 $("#mydiv").show();
                 initCountdown();
-            }
         }
     </script>
 </body>
