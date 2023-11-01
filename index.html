@@ -62,9 +62,6 @@
         <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP TÊN NHÀ MẠNG</label> <BR>
         <input id="nhamanginput" style="font-size: 30px;padding: 10px;border-radius:20PX ;"
             placeholder="NHÀ MẠNG..."><br><br>
-        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP PHÍ CHUYỂN MẠNG</label> <BR>
-        <input id="chuyenmanginput" style="font-size: 30px;padding: 10px;border-radius:20PX ;"
-            placeholder="PHÍ CHUYỂN MẠNG..."><br><br>
         <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP GIÁ KHỞI ĐIỂM</label> <BR>
         <input id="khoidiemINPUT" style="font-size: 30px;padding: 10px;border-radius:20PX ;"
             placeholder="GIÁ KHỞI ĐIỂM..."><br><br>
@@ -92,12 +89,9 @@
             $("#phienban").text($("#phienbaninput").val());
             $("#sdt").text($("#sdtinput").val());
             $("#nhamangid").text($("#nhamanginput").val());
-            $("#chuyenmangid").text($("#chuyenmanginput").val());
             $("#khoidiemid").text($("#khoidiemINPUT").val());
             $("#buocnhayid").text($("#buocnhayidinput").val());
             $('#mydiv').data('duration', $("#THOIGIANIPUT").val());
-            alert($('#mydiv').data('duration'));
-
         }
         function BatDau() {
              $("#batdau").hide();
