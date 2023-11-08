@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ĐẤU GIÁ SIM</title>
+    <title>ĐÁU GIÁ SIM</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/countdown.css">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
@@ -23,12 +23,12 @@
     </style>
 </head>
 
-<body style="background-color: rgb(255, 255, 255);" id="BEST">
+<body style="background-color: rgb(255, 255, 255); zoom: 80%;" id="BEST" >
     <div style="position: absolute; text-align: center; display: none" id="divmain">
         <h2 style="color: #007d72; font-size: 6em; MARGIN-TOP:-10PX">
             PHIÊN LIVE NGÀY <span id="phienban">31-10-2023</span>
         </h2>
-        <h2 style="color:red; font-size: 12em; letter-spacing: 30px; font-weight: 1000;;" id="sdt">
+        <h2 style="color: rgb(168, 0, 14); font-size: 12em; letter-spacing: 30px; font-weight: 1000;;" id="sdt">
             0989.888.999
         </h2>
         <h2 style="color: rgb(0 146 181); font-size: 5em;  font-weight: 1000; text-align: left !important;">
@@ -46,58 +46,356 @@
             style="font-size: 70px;padding: 10px;border-radius:20PX; color:white;  background-color: #007d72; display: none;">BẮT
             ĐẦU</button>
     </div>
-    <div style="MARGIN-RIGHT:-68%; margin-top: 23%; display: none;" id="mydiv" class="countdown-container"
+    <div style="MARGIN-RIGHT:-82%; margin-top: 32%; display: none;" id="mydiv" class="countdown-container"
         data-duration="" data-transition="linear" data-color="#007d72" data-size="580" data-position="right">
     </div>
-    <div id="setupid">
-        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP NGÀY LIVE</label> <BR>
-        <input id="phienbaninput" style="font-size: 30px; padding: 10px; border-radius:20PX ;"
-            placeholder="NHẬP NGÀY LIVE..."><br> <BR>
-        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP SỐ ĐIỆN THOẠI</label> <BR>
-        <input id="sdtinput" style="font-size: 30px;padding: 10px;border-radius:20PX ;"
-            placeholder="NHẬP SĐT..."><br><br>
-        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP TÊN NHÀ MẠNG</label> <BR>
-        <input id="nhamanginput" style="font-size: 30px;padding: 10px;border-radius:20PX ;"
-            placeholder="NHÀ MẠNG..."><br><br>
-        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP GIÁ KHỞI ĐIỂM</label> <BR>
-        <input id="khoidiemINPUT" style="font-size: 30px;padding: 10px;border-radius:20PX ;"
-            placeholder="GIÁ KHỞI ĐIỂM..."><br><br>
-        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP BƯỚC NHẢY</label> <BR>
-        <input id="buocnhayidinput" style="font-size: 30px;padding: 10px;border-radius:20PX;;"
-            placeholder="BƯỚC NHẢY..."><br><br>
-        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP THỜI GIAN (GIÂY)</label> <BR>
-        <input id="THOIGIANIPUT" style="font-size: 30px;padding: 10px;border-radius:20PX;;"
-            placeholder="THỜI GIAN..."><br><br>
-        <button onclick="Setup()"
-            style="font-size: 30px;padding: 10px;border-radius:20PX; color:white;  background-color: #007d72">HOÀN
+    <div id="setupid" style="text-align: center;">
+        <label style="font-size: 30px; color: darkgreen; font-weight: bold;">NHẬP NGÀY LIVE</label> <br>
+        <input id="phienbaninput1" style="font-size: 30px; padding: 10px; border-radius:10PX ;"
+            placeholder="NHẬP NGÀY LIVE...">
+        <table style="margin-top: 30px; zoom: 130%;">
+            <thead>
+                <tr>
+                    <th>
+                        <label style="font-size: 15px; color: darkgreen; font-weight: bold;">STT</label>
+                    </th>
+                    <th>
+                        <label style="font-size: 15px; color: darkgreen; font-weight: bold;">NHẬP SỐ ĐIỆN THOẠI</label>
+                    </th>
+                    <th>
+                        <label style="font-size: 15px; color: darkgreen; font-weight: bold;">NHẬP TÊN NHÀ MẠNG</label>
+                    </th>
+                    <th>
+                        <label style="font-size: 15px; color: darkgreen; font-weight: bold;">NHẬP GIÁ KHỞI ĐIỂM</label>
+                    </th>
+                    <th>
+                        <label style="font-size: 15px; color: darkgreen; font-weight: bold;">NHẬP BƯỚC NHẢY</label>
+                    </th>
+                    <td>
+                        <label style="font-size: 15px; color: darkgreen; font-weight: bold;">NHẬP THỜI GIAN</label>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 1 -->
+                <tr>
+                    <td>
+                        <label
+                            style="background-color: rgb(0, 106, 124); padding:10px;border-radius: 10px; font-size: 15px; font-weight: bold;">1</label>
+                    </td>
+
+                    <td>
+                        <input id="sdtinput1" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHẬP SĐT...">
+                    </td>
+                    <td>
+                        <input id="nhamanginput1" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHÀ MẠNG...">
+                    </td>
+                    <td>
+                        <input id="khoidiemINPUT1" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="GIÁ KHỞI ĐIỂM...">
+                    </td>
+                    <td>
+                        <input id="buocnhayidinput1" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="BƯỚC NHẢY...">
+                    </td>
+                    <td>
+                        <input id="THOIGIANIPUT1" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="THỜI GIAN...">
+                    </td>
+                </tr>
+                <!-- 1 -->
+                <tr style="margin-top: 20px;">
+                    <td>
+                        <label
+                            style="background-color: rgb(0, 106, 124); padding:10px;border-radius: 10px; font-size: 15px; font-weight: bold;">2</label>
+                    </td>
+                    <td>
+                        <input id="sdtinput2" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHẬP SĐT...">
+                    </td>
+                    <td>
+                        <input id="nhamanginput2" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHÀ MẠNG...">
+                    </td>
+                    <td>
+                        <input id="khoidiemINPUT2" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="GIÁ KHỞI ĐIỂM...">
+                    </td>
+                    <td>
+                        <input id="buocnhayidinput2" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="BƯỚC NHẢY...">
+                    </td>
+                    <td>
+                        <input id="THOIGIANIPUT2" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="THỜI GIAN...">
+                    </td>
+                </tr>
+                <tr style="margin-top: 20px;">
+                    <td>
+                        <label
+                            style="background-color: rgb(0, 106, 124); padding:10px;border-radius: 10px; font-size: 15px; font-weight: bold;">3</label>
+                    </td>
+                    <td>
+                        <input id="sdtinput3" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHẬP SĐT...">
+                    </td>
+                    <td>
+                        <input id="nhamanginput3" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHÀ MẠNG...">
+                    </td>
+                    <td>
+                        <input id="khoidiemINPUT3" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="GIÁ KHỞI ĐIỂM...">
+                    </td>
+                    <td>
+                        <input id="buocnhayidinput3" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="BƯỚC NHẢY...">
+                    </td>
+                    <td>
+                        <input id="THOIGIANIPUT3" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="THỜI GIAN...">
+                    </td>
+                </tr>
+                <tr style="margin-top: 20px;">
+                    <td>
+                        <label
+                            style="background-color: rgb(0, 106, 124); padding:10px;border-radius: 10px; font-size: 15px; font-weight: bold;">4</label>
+                    </td>
+                    <td>
+                        <input id="sdtinput4" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHẬP SĐT...">
+                    </td>
+                    <td>
+                        <input id="nhamanginput4" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHÀ MẠNG...">
+                    </td>
+                    <td>
+                        <input id="khoidiemINPUT4" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="GIÁ KHỞI ĐIỂM...">
+                    </td>
+                    <td>
+                        <input id="buocnhayidinput4" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="BƯỚC NHẢY...">
+                    </td>
+                    <td>
+                        <input id="THOIGIANIPUT4" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="THỜI GIAN...">
+                    </td>
+                </tr>
+                <tr style="margin-top: 20px;">
+                    <td>
+                        <label
+                            style="background-color: rgb(0, 106, 124); padding:10px;border-radius: 10px; font-size: 15px; font-weight: bold;">5</label>
+                    </td>
+                    <td>
+                        <input id="sdtinput5" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHẬP SĐT...">
+                    </td>
+                    <td>
+                        <input id="nhamanginput5" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHÀ MẠNG...">
+                    </td>
+                    <td>
+                        <input id="khoidiemINPUT5" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="GIÁ KHỞI ĐIỂM...">
+                    </td>
+                    <td>
+                        <input id="buocnhayidinput5" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="BƯỚC NHẢY...">
+                    </td>
+                    <td>
+                        <input id="THOIGIANIPUT5" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="THỜI GIAN...">
+                    </td>
+                </tr>
+                <tr style="margin-top: 20px;">
+                    <td>
+                        <label
+                            style="background-color: rgb(0, 106, 124); padding:10px;border-radius: 10px; font-size: 15px; font-weight: bold;">5</label>
+                    </td>
+                    <td>
+                        <input id="sdtinput6" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHẬP SĐT...">
+                    </td>
+                    <td>
+                        <input id="nhamanginput6" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHÀ MẠNG...">
+                    </td>
+                    <td>
+                        <input id="khoidiemINPUT6" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="GIÁ KHỞI ĐIỂM...">
+                    </td>
+                    <td>
+                        <input id="buocnhayidinput6" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="BƯỚC NHẢY...">
+                    </td>
+                    <td>
+                        <input id="THOIGIANIPUT6" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="THỜI GIAN...">
+                    </td>
+                </tr>
+                <tr style="margin-top: 20px;">
+                    <td>
+                        <label
+                            style="background-color: rgb(0, 106, 124); padding:10px;border-radius: 10px; font-size: 15px; font-weight: bold;">7</label>
+                    </td>
+                    <td>
+                        <input id="sdtinput7" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHẬP SĐT...">
+                    </td>
+                    <td>
+                        <input id="nhamanginput7" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHÀ MẠNG...">
+                    </td>
+                    <td>
+                        <input id="khoidiemINPUT7" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="GIÁ KHỞI ĐIỂM...">
+                    </td>
+                    <td>
+                        <input id="buocnhayidinput7" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="BƯỚC NHẢY...">
+                    </td>
+                    <td>
+                        <input id="THOIGIANIPUT7" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="THỜI GIAN...">
+                    </td>
+                </tr>
+                <tr style="margin-top: 20px;">
+                    <td>
+                        <label
+                            style="background-color: rgb(0, 106, 124); padding:10px;border-radius: 10px; font-size: 15px; font-weight: bold;">8</label>
+                    </td>
+                    <td>
+                        <input id="sdtinput8" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHẬP SĐT...">
+                    </td>
+                    <td>
+                        <input id="nhamanginput8" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHÀ MẠNG...">
+                    </td>
+                    <td>
+                        <input id="khoidiemINPUT8" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="GIÁ KHỞI ĐIỂM...">
+                    </td>
+                    <td>
+                        <input id="buocnhayidinput8" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="BƯỚC NHẢY...">
+                    </td>
+                    <td>
+                        <input id="THOIGIANIPUT8" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="THỜI GIAN...">
+                    </td>
+                </tr>
+                <tr style="margin-top: 20px;">
+                    <td>
+                        <label
+                            style="background-color: rgb(0, 106, 124); padding:10px;border-radius: 10px; font-size: 15px; font-weight: bold;">9</label>
+                    </td>
+                    <td>
+                        <input id="sdtinput9" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHẬP SĐT...">
+                    </td>
+                    <td>
+                        <input id="nhamanginput9" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHÀ MẠNG...">
+                    </td>
+                    <td>
+                        <input id="khoidiemINPUT9" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="GIÁ KHỞI ĐIỂM...">
+                    </td>
+                    <td>
+                        <input id="buocnhayidinput9" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="BƯỚC NHẢY...">
+                    </td>
+                    <td>
+                        <input id="THOIGIANIPUT9" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="THỜI GIAN...">
+                    </td>
+                </tr>
+                <tr style="margin-top: 20px;">
+                    <td>
+                        <label
+                            style="background-color: rgb(0, 106, 124); padding:10px;border-radius: 10px; font-size: 15px; font-weight: bold;">10</label>
+                    </td>
+                    <td>
+                        <input id="sdtinput10" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHẬP SĐT...">
+                    </td>
+                    <td>
+                        <input id="nhamanginput10" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="NHÀ MẠNG...">
+                    </td>
+                    <td>
+                        <input id="khoidiemINPUT10" style="font-size: 15px; padding: 7px; border-radius:10PX ;"
+                            placeholder="GIÁ KHỞI ĐIỂM...">
+                    </td>
+                    <td>
+                        <input id="buocnhayidinput10" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="BƯỚC NHẢY...">
+                    </td>
+                    <td>
+                        <input id="THOIGIANIPUT10" style="font-size: 15px; padding: 7px; border-radius:10PX;;"
+                            placeholder="THỜI GIAN...">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br>
+        <button onclick="Setup(1)"
+            style="font-size: 15px;padding: 10px;border-radius:20PX; color:white;  background-color: #007d72">HOÀN
             TẤT</button>
     </div>
-
+    <script>
+        let number_ = 1;
+    </script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
         </script>
     <script src="js/index.js"></script>
     <script>
-        function Setup() {
-
+        function Setup(id) {
 
             $("#setupid").hide();
             $("#batdau").show();
-            $("#phienban").text($("#phienbaninput").val());
-            $("#sdt").text($("#sdtinput").val());
-            $("#nhamangid").text($("#nhamanginput").val());
-            $("#khoidiemid").text($("#khoidiemINPUT").val());
-            $("#buocnhayid").text($("#buocnhayidinput").val());
-            $('#mydiv').data('duration', $("#THOIGIANIPUT").val());
+            $("#phienban").text($("#phienbaninput").val()); 
+            $("#sdt").text($("#sdtinput" + id).val());
+            $("#nhamangid").text($("#nhamanginput" + id).val());
+            $("#khoidiemid").text($("#khoidiemINPUT" + id).val());
+            $("#buocnhayid").text($("#buocnhayidinput" + id).val());
+            $('#mydiv').data('duration', $("#THOIGIANIPUT" + id).val());
+
+        }
+        function Setup2(id) {
+            if($("#sdtinput" + id).val() == undefined || $("#sdtinput" + id).val()=='')
+                {
+                    confirm("ĐÃ KẾT THÚC BUỔI LIVE!!!")
+                    location.reload();
+                }
+            $("#sdt").text($("#sdtinput" + id).val());
+            $("#nhamangid").text($("#nhamanginput" + id).val());
+            $("#khoidiemid").text($("#khoidiemINPUT" + id).val());
+            $("#buocnhayid").text($("#buocnhayidinput" + id).val());
+            $('#mydiv').data('duration', $("#THOIGIANIPUT" + id).val());
+            initCountdown();
+
         }
         function BatDau() {
-             $("#batdau").hide();
+            let cf = confirm("BẠN CHẮC BẮT ĐẦU CHỨ???");
+            if (cf) {
+                $("#batdau").hide();
                 $("#divmain").show();
                 $("#mydiv").show();
                 openFullscreen();
                 initCountdown();
+            }
         }
         var elem = document.getElementById("BEST");
+
+        /* When the openFullscreen() function is executed, open the video in fullscreen.
+        Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
         function openFullscreen() {
             if (elem.requestFullscreen) {
                 elem.requestFullscreen();
